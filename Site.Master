@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Exercice2_AT5.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1255px;
+            height:800px;
+        }
+        .auto-style2 {
+            height: 50px;
+            background-color:black;
+            color:white;
+            text-align:center;
+            font-family:Arial;
+        }
+        .auto-style3 {
+            width: 1255px;
+            height:200px;
+        }
+        .auto-style4 {
+            height: 200px;
+        }
+         </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="4" class="auto-style4">
+                        <asp:Image ID="Image1" runat="server" class="auto-style3" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Accueil</td>
+                    <td class="auto-style2">Profil</td>
+                    <td class="auto-style2">Contact</td>
+                    <td class="auto-style2">
+                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                        <td colspan="4">
+
+                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                             <h1>Introduction aux saisons</h1>
+                        
+                    </asp:ContentPlaceHolder>
+                            </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="4" class="auto-style2">
+                        Copyright c 2018 TDI ISGI - Designed by Mazzouz Chaimae
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
