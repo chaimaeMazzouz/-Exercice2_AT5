@@ -25,6 +25,13 @@
         .auto-style4 {
             height: 200px;
         }
+        .auto-style5 {
+           color:#95D2A5;
+        }
+        a{
+            text-decoration:none;
+            color:white;
+        }
          </style>
 </head>
 <body>
@@ -33,15 +40,19 @@
             <table class="auto-style1">
                 <tr>
                     <td colspan="4" class="auto-style4">
-                        <asp:Image ID="Image1" runat="server" class="auto-style3" />
+                        <asp:Image ID="Image1" runat="server" class="auto-style3" Height="295px" ImageUrl="~/Images/printemps.jpg" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Accueil</td>
-                    <td class="auto-style2">Profil</td>
-                    <td class="auto-style2">Contact</td>
+                    <td class="auto-style2"><a href="Accueil.aspx">Accueil</a> </td>
+                    <td class="auto-style2"><a href="Profil.aspx">Profil</a> </td>
+                    <td class="auto-style2"><a href="Contact.aspx"> Contact</a></td>
                     <td class="auto-style2">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                            <asp:ListItem>printemps</asp:ListItem>
+                            <asp:ListItem>été</asp:ListItem>
+                            <asp:ListItem>automne </asp:ListItem>
+                            <asp:ListItem>hiver</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -49,15 +60,16 @@
                         <td colspan="4">
 
                     <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
-                             <h1>Introduction aux saisons</h1>
-                        
-                    </asp:ContentPlaceHolder>
+                        <div class="auto-style5">
+                            
+                  </div>
+                            </asp:ContentPlaceHolder>
                             </td>
                     
                 </tr>
                 <tr>
                     <td colspan="4" class="auto-style2">
-                        Copyright c 2018 TDI ISGI - Designed by Mazzouz Chaimae
+                        Copyright &copy; 2018 TDI ISGI - Designed by Mazzouz Chaimae
                     </td>
                 </tr>
             </table>

@@ -13,5 +13,29 @@ namespace Exercice2_AT5
         {
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (DropDownList1.SelectedIndex)
+            {
+                case 0:
+                    Image1.ImageUrl = "~/Images/printemps.jpg";
+                    break;
+                case 1:
+                    Image1.ImageUrl = "~/Images/été.jpg";
+
+                    break;
+                case 2:
+                    Image1.ImageUrl = "~/Images/automne.jpg";
+
+                    break;
+                case 3:
+                    Image1.ImageUrl = "~/Images/hiver.jpg";
+
+                    break;
+               
+            }
+            
+        }
     }
 }
